@@ -37,7 +37,6 @@ public class Tablero {
         }
     }
     public void crearCarro(String tipo){
-        boolean ubicado = false;
         while(true){
             int row = (int) Math.floor(Math.random() * 15);
             int col = (int) Math.floor(Math.random() * 15);
