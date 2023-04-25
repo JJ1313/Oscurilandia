@@ -12,7 +12,4 @@ public class Kromi extends Carro{
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         this.fechaFabricacion = formato.parse(fechaFabricacion);
     }
-    public void ubicar(){
-
-    }
 }
