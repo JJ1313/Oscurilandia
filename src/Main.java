@@ -39,10 +39,22 @@ public class Main {
             }
             // --- Lanzar huevo ---
             else if(opcion.equals("1")){
-                System.out.println("Ingresa la posicion X: ");
-                int  col = Integer.parseInt(in.nextLine());
-                System.out.println("Ingresa la posicion Y: ");
-                int row = Integer.parseInt(in.nextLine());
+                int col;
+                int row;
+                do{
+                    System.out.println("Ingresa la posicion X: ");
+                    col = Integer.parseInt(in.nextLine());
+                    if(col >= tablero.getCols()  ||  col < 0){
+                        System.out.println("Posicion 'x' NO valida");
+                    }
+                } while(col >= tablero.getCols()  ||  col < 0);
+                do {
+                    System.out.println("Ingresa la posicion Y: ");
+                    row = Integer.parseInt(in.nextLine());
+                    if(row >= tablero.getRows() || row < 0){
+                        System.out.println("Posicion 'y' NO valida");
+                    }
+                } while(row >= tablero.getRows() || row < 0);
                 tablero.lanzarHuevo(row, col);
                 tablero.mostrarMatriz();
             }
